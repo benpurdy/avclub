@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+  <head>
+    <title>XOXO A/V Club</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="apple-touch-icon" href="/images/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/touch-icon-ipad-retina.png">
+  </head>
+  <body>
+    <div id="main-content">
+      <h1>XOXO Outpost AV Club</h1>
+
+      <h2>Projector: <span id="projector-status"></span></h2>
+      <div id="projector">
+        <div id="projector-on" class="button disabled">Turn On</div>
+        <div id="projector-off" class="button disabled">Turn Off</div>
+      </div>
+      
+      <h2>Input</h2>
+      <div id="sources">
+        <div class="button" data-command="set-input" data-param="CD">iPod (music)</div>
+        <div class="button" data-command="set-input" data-param="DVD">HDMI Cable</div>
+        <div class="button" data-command="set-input" data-param="SAT/CBL">Apple TV</div>
+      </div>
+      
+      <h2>Audio: <span>(volume: <span id="audio-level"></span>%)</span></h2>
+      <div id="audio-levels">
+        <div id="volume-up" class="button">Volume Up</div>
+        <div id="volume-down" class="button">Volume Down</div>
+        <div id="mute" class="button">Mute</div>
+      </div>
+
+      <div id="extras">
+        <div id="volume-default" class="button">Set Default Volume (for music)</div>
+      </div>
+
+      <div id="modal-overlay">
+        <div id="disconnected">Unable to Connect<br><br><br>Please join the XOXO WiFi and try again.<br><br>If you are on the XOXO WiFi, the AV Club server may be having problems.</div>
+        <div id="connecting"><span class="cooldown">Connecting...</span></div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/jquery-3.0.0.min.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>

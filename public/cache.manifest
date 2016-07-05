@@ -1,0 +1,9 @@
+CACHE:
+/js/app.js
+/js/jquery-3.0.0.min.js
+/images/favicon.png
+/css/style.css
+/fonts/ShareTech-Regular.ttf
+
+NETWORK:
+*
